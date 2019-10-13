@@ -1,0 +1,5 @@
+1) collegare pagine login, create user, recupero password
+2) collegare con database mongodb atlas -> user utenti e task per le psswrd salvate
+3) invio mail nuovo account e cambio password
+4) tabella della pagina carica task di quell'account
+5) form per nuovo task
