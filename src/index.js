@@ -39,6 +39,12 @@ app.get('/singup',(req,res) => {
     })
 })
 
+app.get('/lostpsswd',(req,res) => {
+    res.render('lostpssw',{
+        name:'Christian'
+    })
+})
+
 app.post('/singup',(req,res) => {
     console.log('ricevuto post')
 })
