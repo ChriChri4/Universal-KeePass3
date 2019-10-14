@@ -3,3 +3,8 @@
 3) invio mail nuovo account e cambio password
 4) tabella della pagina carica task di quell'account
 5) form per nuovo task
+
+
+IMPORTANTE:
+
+1) cancellare avatar caricamento immagine

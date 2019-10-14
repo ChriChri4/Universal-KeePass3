@@ -11,15 +11,17 @@
         <div class="loginbox" style="text-align: center;">
             <img class="logo" src="/img/logo.png">
             <h1> Register an account </h1>
-            <form>
+            <form method="POST" action="/users">
                 <p> Email </p>
-                <input type="text" name="" placeholder=" Enter Email">
+                <input type="text" placeholder=" Enter Email" name="email">
                 <p> Password </p>
-                <input type="password" name="" placeholder=" Enter Password">
+                <input type="password" placeholder=" Enter Password" name="password"> 
                 <p> Repeat Password </p>
-                <input type="password" name="" placeholder=" Enter Password Again">
-                <button>Create Account</button>>
+                <input type="password" placeholder=" Enter Password Again" name="confirmPassword"> 
+                <!--<button>Create Account</button>-->
+                <input type="submit" value="Create Account">
             </form>
         </div>
+        <script src="/js/singup.js"></script>
     </body>
 </html>

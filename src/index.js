@@ -1,7 +1,9 @@
 const express = require('express')
-const fs = require('fs')
 const path = require('path')
 const hbs = require('hbs')
+const userRouter = require('./routers/user')
+const taskRouter = require('./routers/task')
+require('./db/mongoose')
 
 const app = express()
 
@@ -19,6 +21,9 @@ hbs.registerPartials(partialsPath)
 
 //Middleware
 app.use(express.static(publicDirectoryPath))
+app.use(express.json())
+app.use(userRouter)
+app.use(taskRouter)
 
 
 //Responses
@@ -27,6 +32,17 @@ app.get('',(req,res) => {
         name: "Christian"
     }) 
 })
+
+app.get('/singup',(req,res) => {
+    res.render('singup',{
+        name:'Christian'
+    })
+})
+
+app.post('/singup',(req,res) => {
+    console.log('ricevuto post')
+})
+
 
 app.listen(port,() => {
     console.log('Server is running on port '+port)
