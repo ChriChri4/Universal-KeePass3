@@ -8,3 +8,6 @@
 IMPORTANTE:
 
 1) cancellare avatar caricamento immagine
+
+
+https://www.freecodecamp.org/news/here-is-the-most-popular-ways-to-make-an-http-request-in-javascript-954ce8c95aaa/
