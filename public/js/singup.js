@@ -23,7 +23,6 @@
                     },
                     error: function(error){
                         console.log('ERRORE: '+error)
-                        debugger
                     }
                 })
             } else {
