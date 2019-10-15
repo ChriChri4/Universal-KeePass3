@@ -44,8 +44,9 @@ h1 {
 }
 
 .loginbox input {
-    width: 100%;
+    width: 50%;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .loginbox input[type="text"], input[type="password"] 
@@ -64,8 +65,4 @@ button {
     background: #888888;
     color: white;
     padding: 8px;
-}
-
-button.login-button{
-width: 90%;
 }
