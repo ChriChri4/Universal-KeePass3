@@ -9,6 +9,7 @@ IMPORTANTE:
 
 1) cancellare avatar caricamento immagine
 2) Generazione TOKEN ---> funziona ma da vedere che fa
+3) cancellare dati user e task non usati tipo age
 
 
 https://www.freecodecamp.org/news/here-is-the-most-popular-ways-to-make-an-http-request-in-javascript-954ce8c95aaa/
