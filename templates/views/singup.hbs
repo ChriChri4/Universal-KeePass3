@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="/css/login.css">
+        <link rel="stylesheet" type="text/css" href="/css/singup.css">
         <link rel="stylesheet" type>
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Universal KeePass</title>
+        <!-- Jquery Ajax-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="loginbox" style="text-align: center;">
             <img class="logo" src="/img/logo.png">
             <h1> Register an account </h1>
-            <form method="POST" action="/users">
+            <form>
+                <p> Account Name </p>
+                <input type="text" placeholder=" Enter Name" id="name" value="">
                 <p> Email </p>
-                <input type="text" placeholder=" Enter Email" name="email">
+                <input type="text" placeholder=" Enter Email" id="email" value="">
                 <p> Password </p>
-                <input type="password" placeholder=" Enter Password" name="password"> 
+                <input type="password" placeholder=" Enter Password" id="password" value=""> 
                 <p> Repeat Password </p>
-                <input type="password" placeholder=" Enter Password Again" name="confirmPassword"> 
-                <!--<button>Create Account</button>-->
-                <input type="submit" value="Create Account">
+                <input type="password" placeholder=" Enter Password Again" id="confirmPassword" value=""> 
+                <button>Create Account</button>
+                <p id="validationPassword"></p>
+                {{!-- <input type="submit" value="Create Account"> --}}
             </form>
         </div>
         <script src="/js/singup.js"></script>
+
     </body>
 </html>
