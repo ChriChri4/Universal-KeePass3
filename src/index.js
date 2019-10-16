@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000
 
 //Percorsi file view
 const publicDirectoryPath = path.join(__dirname,'../public')
-const viewsPath = path.join('../templates/views')
+const viewsPath = path.join(__dirname,'../templates/views')
 const partialsPath = path.join(__dirname,'../templates/partials')
 
 app.set('view engine','hbs')  //set da delle impostazioni ad Express, hbs è il modulo installato --> in questa riga abbiamo settato handlebars e ora possiamo creare template dinamici
