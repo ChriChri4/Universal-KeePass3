@@ -1,11 +1,5 @@
-//window.onload = alert(localStorage.getItem("token"))
 const token = localStorage.getItem("token")
 
-
-/*$(document).ready(function() {
-
-    $("#btn").click(function() {*/
-        //alert('avvio chiamata')
         $.ajax({
             async:false,
             headers: {
@@ -15,11 +9,7 @@ const token = localStorage.getItem("token")
             type:'GET',
             success: function(result){
                 console.log(result)
-
-                let array = [
-                    {description: 'ciao', key:'hola'}
-                ]
-
+                
                 function loadTableData(result) {
                     const tableBody = document.getElementById('data')
                     let dati =''
@@ -35,17 +25,13 @@ const token = localStorage.getItem("token")
                     } else {
                         tableBody.innerHTML = `<tr><td> No Data to display </td></tr>`
                     }
-                    
                 }
 
                 loadTableData(result)               
-
             },
             error: function(error){
                 console.log('ERRORE: '+error)
                 alert(error)
             }
         })
-    /*})
 
-})*/

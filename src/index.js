@@ -47,13 +47,9 @@ app.get('/lostpssw',(req,res) => {
 
 app.get('/index',(req,res) => {
     res.render('index',{
-        name:'Christian'
+        name:'Christian Vaccarino'
     })
 })
-
-/*app.post('/singup',(req,res) => {
-    console.log('ricevuto post')
-})*/
 
 
 app.listen(port,() => {
