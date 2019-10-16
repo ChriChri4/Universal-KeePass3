@@ -45,9 +45,15 @@ app.get('/lostpssw',(req,res) => {
     })
 })
 
-app.post('/singup',(req,res) => {
-    console.log('ricevuto post')
+app.get('/index',(req,res) => {
+    res.render('index',{
+        name:'Christian'
+    })
 })
+
+/*app.post('/singup',(req,res) => {
+    console.log('ricevuto post')
+})*/
 
 
 app.listen(port,() => {

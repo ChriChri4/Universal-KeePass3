@@ -5,3 +5,7 @@ div.col-sm-2 {
 footer {
     text-align: center;
 }
+
+th, td {
+  padding: 15px;
+}
