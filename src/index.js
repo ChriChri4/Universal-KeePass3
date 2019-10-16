@@ -28,7 +28,7 @@ app.use(taskRouter)
 
 //Responses
 app.get('',(req,res) => {
-    res.render('login', { //renderizza una mia view, index deve coincidere con il nome della view (in questo caso index.hbs)
+    res.render('home', { //renderizza una mia view, index deve coincidere con il nome della view (in questo caso index.hbs)
         name: "Christian"
     }) 
 })
@@ -47,6 +47,12 @@ app.get('/lostpssw',(req,res) => {
 
 app.get('/index',(req,res) => {
     res.render('index',{
+        name:'Christian Vaccarino'
+    })
+})
+
+app.get('/login',(req,res) => {
+    res.render('login',{
         name:'Christian Vaccarino'
     })
 })
