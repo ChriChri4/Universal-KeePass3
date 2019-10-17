@@ -20,7 +20,7 @@
                     success: function(result){
                         console.log(result)
                         alert('Account Created! You will return on Login Page')
-                        window.location.href = '/'
+                        window.location.href = '/login'
                     },
                     error: function(error){
                         console.log('ERRORE: '+error)

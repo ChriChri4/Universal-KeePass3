@@ -69,7 +69,7 @@ function updateTable() {
                             url: '/tasks/'+idService,
                             type:'DELETE',
                             success: function(result){
-                                console.log('funge')
+                                console.log('ok')
                             },
                             error:function(error){
                                 console.log(error)
