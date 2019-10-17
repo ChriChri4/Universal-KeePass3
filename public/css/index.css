@@ -176,3 +176,7 @@ footer {
 th, td {
   padding: 15px;
 }
+
+td.keys {
+    color: white
+}

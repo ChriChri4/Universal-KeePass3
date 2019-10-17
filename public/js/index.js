@@ -17,7 +17,7 @@ function updateTable() {
                 const titoli = `<tr><th>${'Service'}</th><th>${'Key'}</th><th>${'Options'}</th></tr>`
                 let i = 0
                 for (let risultato of result) {
-                    dati += `<tr><td>${risultato.description}</td><td>${risultato.key}</td><td><input type="button" id="${i}service" value="Delete this Service" onclick="deleteRow(this)"></td></tr>`
+                    dati += `<tr><td>${risultato.description}</td><td id="${i} key" class="${i} keys">${risultato.key}</td><td><input type="button" id="${i}service" value="Delete this Service" onclick="deleteRow(this)"><input type="button" id="${i}service" value="Show" onclick="showPSSW(this)"></td></tr>`
                     i++
                 }
 
@@ -39,6 +39,10 @@ function updateTable() {
     })
 }
     updateTable()
+
+    function showPSSW(i) {
+        document.getElementById("key").style.color="blue";
+    }
 
     function deleteRow(r) {
         var i = r.parentNode.parentNode.rowIndex;
@@ -134,4 +138,19 @@ function updateTable() {
                 console.log(error)
             }
         })
+
+    
+    })
+
+    $('#random').click(function() {
+        function generatePSSW(length) {
+            var result           = '';
+            var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789/*-?^=)(/&%$£"!\/';
+            var charactersLength = characters.length;
+            for ( var i = 0; i < length; i++ ) {
+               result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            document.getElementById('password').value = result
+         }
+        generatePSSW(document.getElementById('lengthPSSW').value)
     })
