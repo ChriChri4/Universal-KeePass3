@@ -33,10 +33,10 @@
             <a href="/index" id="index">Credentials</a>
           </li>
           <li>
-            <a href="/settings" id="settings">Settings</a>
+            <a href="#" id="settings">Settings</a>
           </li>
           <li>
-            <a href="#" id="logout">Logout</a> 
+            <a href="#" id="logout">Logout</a>
           </li>
         </ul>
         <ul class="list-unstyled CTAs">
@@ -57,20 +57,21 @@
         <br>
         <br>
         <br>
-        <p>Service</p>
-        <input type="text" id="service">
+        <h4>Change Password</h4>
         <br>
-        <p>Password</p>
-        <input type="text" id="password">
+        <p>New password</p>
+        <input type="password" id="newPSSW">
         <br>
-        <br>
-        <input type="button" id="dt" value="Add new credentials">
-        <input type="button" id="random" value="Random PSW">
-        <input type="text" id="lengthPSSW" placeholder="Choose a value from 8 to 64">
+        <p>Repeat password</p>
+        <input type="password" id="repPSSW">
         <br>
         <br>
+        <input type="button" id="confirm" value="Confirm">
         <br>
-        <table class="table-striped table-bordered" id="data"></table>
+        <br>
+        <br>
+        <h4>Delete account</h4>
+        <input type="button" id="delete" value="Delete">
         
         
       </div>
@@ -94,6 +95,6 @@
                  });
              });
          </script>
-         <script src="/js/index.js"></script>   
+         <script src="/js/settings.js"></script>   
   </body>
 </html>

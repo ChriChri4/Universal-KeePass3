@@ -145,8 +145,38 @@ function updateTable() {
                 console.log(error)
             }
         })
+    })
 
-    
+    $("#settings").click(function() {
+        $.ajax({
+            headers: {
+                'Authorization':'Bearer ' + token
+            },
+            url: '/settings',
+            type:'GET',
+            success: function(result){
+                console.log(result)
+            },
+            error: function(error){
+                console.log(error)
+            }
+        })
+    })
+
+    $("#index").click(function() {
+        $.ajax({
+            headers: {
+                'Authorization':'Bearer ' + token
+            },
+            url: '/index',
+            type:'GET',
+            success: function(result){
+                console.log(result)
+            },
+            error: function(error){
+                console.log(error)
+            }
+        })
     })
 
     $('#random').click(function() {

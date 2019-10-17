@@ -57,6 +57,12 @@ app.get('/login',(req,res) => {
     })
 })
 
+app.get('/settings',(req,res) => {
+    res.render('settings',{
+        name:'Christian Vaccarino'
+    })
+})
+
 
 app.listen(port,() => {
     console.log('Server is running on port '+port)
