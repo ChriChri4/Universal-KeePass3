@@ -64,7 +64,6 @@ router.get('/tasks/:id', auth, async (req, res) => {
         res.status(500).send()
     }
 })
-
 router.patch('/tasks/:id', auth, async (req, res) => {
     const updates = Object.keys(req.body)
     const allowedUpdates = ['description', 'completed']
@@ -102,5 +101,7 @@ router.delete('/tasks/:id', auth, async (req, res) => {
         res.status(500).send()
     }
 })
+
+
 
 module.exports = router
