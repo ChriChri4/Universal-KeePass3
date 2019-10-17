@@ -17,7 +17,7 @@ function updateTable() {
                 const titoli = `<tr><th>${'Service'}</th><th>${'Key'}</th><th>${'Options'}</th></tr>`
                 let i = 0
                 for (let risultato of result) {
-                    dati += `<tr><td>${risultato.description}</td><td id="${i} key" class="${i} keys" style="visibility:hidden">${risultato.key}</td><td><input type="button" id="${i}service" value="Delete this Service" onclick="deleteRow(this)"><input type="button" id="${i}service" value="Show" onclick="showPSSW(this)"></td></tr>`
+                    dati += `<tr><td>${risultato.description}</td><td id="${i} key" class="${i} keys" style="visibility:hidden">${risultato.key}</td><td>${risultato.email}<td><td><input type="button" id="${i}service" value="Delete this Service" onclick="deleteRow(this)"><input type="button" id="${i}service" value="Show" onclick="showPSSW(this)"></td></tr>`
                     i++
                 }
 
@@ -105,10 +105,12 @@ function updateTable() {
 
         const service = document.getElementById('service').value
         const pssw = document.getElementById('password').value
+        const mail = document.getElementById('email').value
 
         const dati = {
             description: service,
-            key:pssw
+            key:pssw,
+            email:mail
         }
 
         $.ajax({
