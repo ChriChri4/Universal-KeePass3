@@ -17,7 +17,7 @@ function updateTable() {
                 const titoli = `<tr><th>${'Service'}</th><th>${'Key'}</th><th>${'Options'}</th></tr>`
                 let i = 0
                 for (let risultato of result) {
-                    dati += `<tr><td>${risultato.description}</td><td id="${i} key" class="${i} keys">${risultato.key}</td><td><input type="button" id="${i}service" value="Delete this Service" onclick="deleteRow(this)"><input type="button" id="${i}service" value="Show" onclick="showPSSW(this)"></td></tr>`
+                    dati += `<tr><td>${risultato.description}</td><td id="${i} key" class="${i} keys" style="visibility:hidden">${risultato.key}</td><td><input type="button" id="${i}service" value="Delete this Service" onclick="deleteRow(this)"><input type="button" id="${i}service" value="Show" onclick="showPSSW(this)"></td></tr>`
                     i++
                 }
 
@@ -41,7 +41,14 @@ function updateTable() {
     updateTable()
 
     function showPSSW(i) {
-        document.getElementById("key").style.color="blue";
+        var r = i.parentNode.parentNode.rowIndex;
+        if(document.getElementById("data").rows[r].cells[1].style.visibility=="visible")
+        {
+            document.getElementById("data").rows[r].cells[1].style.visibility="hidden";
+        } else {
+            document.getElementById("data").rows[r].cells[1].style.visibility="visible";
+        }
+        
     }
 
     function deleteRow(r) {
