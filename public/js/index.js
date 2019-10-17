@@ -33,7 +33,8 @@ function updateTable() {
         },
         error: function(error){
             console.log('ERRORE: '+error)
-            alert(error)
+            alert('Error: login not executed')
+            window.location.href = '/'
         }
     })
 }
@@ -111,6 +112,23 @@ function updateTable() {
             success: function(result){
                 console.log(result)
                 updateTable()
+            },
+            error: function(error){
+                console.log(error)
+            }
+        })
+    })
+    $("#logout").click(function() {
+
+        $.ajax({
+            headers: {
+                'Authorization':'Bearer ' + token
+            },
+            url: '/users/logoutAll',
+            type:'POST',
+            success: function(result){
+                alert('Logout executed')
+                window.location.href = '/'
             },
             error: function(error){
                 console.log(error)
