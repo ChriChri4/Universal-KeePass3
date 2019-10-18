@@ -14,10 +14,10 @@ function updateTable() {
             function loadTableData(result) {
                 const tableBody = document.getElementById('data')
                 let dati =''
-                const titoli = `<tr><th>${'Service'}</th><th>${'Key'}</th><th>${'Options'}</th></tr>`
+                const titoli = `<tr><th>${'Service'}</th><th>${'Key'}</th><th>Email/User</th><th>${'Options'}</th></tr>`
                 let i = 0
                 for (let risultato of result) {
-                    dati += `<tr><td>${risultato.description}</td><td id="${i} key" class="${i} keys" style="visibility:hidden">${risultato.key}</td><td>${risultato.email}<td><td><input type="button" id="${i}service" value="Delete this Service" onclick="deleteRow(this)"><input type="button" id="${i}service" value="Show/Hide" onclick="showPSSW(this)"></td></tr>`
+                    dati += `<tr><td>${risultato.description}</td><td id="${i} key" class="${i} keys" style="visibility:hidden">${risultato.key}</td><td>${risultato.email}</td><td><input type="button" id="${i}service" value="Delete this Service" onclick="deleteRow(this)"><input type="button" id="${i}service" value="Show/Hide" onclick="showPSSW(this)"></td></tr>`
                     i++
                 }
 
