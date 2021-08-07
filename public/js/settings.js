@@ -14,7 +14,7 @@ $("#confirm").click(function() {
                 'Authorization':'Bearer ' + token
             },
             url: '/users/me',
-            type:'PUT',
+            type:'PATCH',
             dataType: 'json',
             contentType:'application/json',
             data: JSON.stringify(dati),
