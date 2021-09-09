@@ -39,11 +39,11 @@ app.get('/singup',(req,res) => {
     })
 })
 
-app.get('/lostpssw',(req,res) => {
+/*app.get('/lostpssw',(req,res) => {
     res.render('lostpssw',{
         name:'Christian'
     })
-})
+})*/
 
 app.get('/index',(req,res) => {
     res.render('index',{

@@ -65,7 +65,7 @@ router.get('/tasks', auth, async (req, res) => {
 //     }
 // })
 
-router.patch('/tasks/:id', auth, async (req, res) => {
+/*router.patch('/tasks/:id', auth, async (req, res) => {
     const updates = Object.keys(req.body)
     const allowedUpdates = ['description', 'completed']
     const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
@@ -87,7 +87,7 @@ router.patch('/tasks/:id', auth, async (req, res) => {
     } catch (e) {
         res.status(400).send(e)
     }
-})
+})*/
 
 router.delete('/tasks/:id', auth, async (req, res) => {
     try {

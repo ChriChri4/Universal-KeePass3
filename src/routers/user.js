@@ -29,7 +29,7 @@ router.post('/users/login', async (req, res) => {
     }
 })
 
-router.post('/users/logout', auth, async (req, res) => {
+/*router.post('/users/logout', auth, async (req, res) => {
     try {
         req.user.tokens = req.user.tokens.filter((token) => {
             return token.token !== req.token
@@ -40,7 +40,7 @@ router.post('/users/logout', auth, async (req, res) => {
     } catch (e) {
         res.status(500).send()
     }
-})
+})*/
 
 router.post('/users/logoutAll', auth, async (req, res) => {
     try {
@@ -52,9 +52,9 @@ router.post('/users/logoutAll', auth, async (req, res) => {
     }
 })
 
-router.get('/users/me', auth, async (req, res) => {
+/*router.get('/users/me', auth, async (req, res) => {
     res.send(req.user)
-})
+})*/
 
 router.put('/users/me', auth, async (req, res) => {
     const updates = Object.keys(req.body)
